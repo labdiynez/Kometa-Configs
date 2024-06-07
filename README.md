@@ -1,1 +1,1 @@
-# Kometa-Configs
+# OshiDIYNEZ-Configs
