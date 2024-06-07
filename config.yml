@@ -1,6 +1,6 @@
 
 libraries:
-  Kometa:
+  Movies:                       #แก้ชื่อไลบรารี่เป็นของตัวเช่น Movies หรือ 4K
     remove_overlays: false
     overlay_files:
     - file: config/overlays/oshidiynez/gradient.yml
@@ -86,8 +86,8 @@ webhooks:
   changes:
   delete:
 plex:
-  url: http://server_ip:32400
-  token: xxx
+  url: http://server_ip:32400   #แก้ server_ip ระบุ ip เครื่องที่รัน plex server 
+  token: xxx                    #แก้ xxx ระบุ token ที่ถูกต้องครับ
   timeout: 60
   db_cache:
   clean_bundles: false
