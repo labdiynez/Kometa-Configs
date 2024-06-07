@@ -1,0 +1,12 @@
+overlays:
+  gradient_top:
+    overlay:
+      name: gradient
+      file: config/overlays/oshidiynez/gradient/gradient_top.png
+    plex_all: true
+
+  gradient_bottom:
+    overlay:
+      name: gradient
+      file: config/overlays/oshidiynez/gradient/gradient_bottom.png
+    plex_all: true

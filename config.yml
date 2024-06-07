@@ -1,0 +1,104 @@
+
+libraries:
+  Kometa:
+    remove_overlays: false
+    overlay_files:
+    - file: config/overlays/oshidiynez/gradient.yml
+    - default: resolution
+      template_variables: &movies_resolution
+        file: config/overlays/oshidiynez/resolution/<<key>><<alt>>.png
+        use_resolution: true
+        use_edition: false
+        horizontal_offset: 50
+        horizontal_align: left
+        vertical_offset: 50
+        vertical_align: top
+        back_radius: 0
+        back_align: left
+        back_color: '#00000000'
+        back_height: 50
+    - file: config/overlays/oshidiynez/audio_codec.yml
+      template_variables: &movies_audio_codec
+        file: config/overlays/oshidiynez/audio_codec/<<key>>.png
+        horizontal_offset: 50
+        horizontal_align: left
+        vertical_offset: 66
+        vertical_align: bottom
+        back_radius: 10
+        back_align: left
+        back_color: '#00000000'
+        back_height: 49
+    - file: config/overlays/oshidiynez/imdb_rating.yml
+    operations: &operations-movies
+      mass_critic_rating_update: imdb
+      mass_audience_rating_update: tmdb
+      mass_user_rating_update: mdb_tomatoes
+
+settings:
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: true
+  show_missing: true
+  show_missing_assets: true
+  save_report: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_users: all
+  playlist_exclude_users:
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality: 75
+webhooks:
+  error:
+  version:
+  run_start:
+  run_end:
+  changes:
+  delete:
+plex:
+  url: http://server_ip:32400
+  token: xxx
+  timeout: 60
+  db_cache:
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  verify_ssl:
+tmdb:
+  apikey: 62cb97ddfcc65096151d40bc5cbf8315
+  language: en
+  cache_expiration: 60
+  region:
+mdblist:
+  apikey: 83f6742yevnmctvhocmypyur8
+  cache_expiration: 60
