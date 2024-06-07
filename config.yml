@@ -1,6 +1,6 @@
 
 libraries:
-  Movies:                       #แก้ชื่อไลบรารี่เป็นของตัวเช่น Movies หรือ 4K
+  Movies:                       #แก้ชื่อไลบรารี่เป็นชื่อไลบรารี่ที่ใช้งานจริงเช่น Movies หรือ 4K
     remove_overlays: false
     overlay_files:
     - file: config/overlays/oshidiynez/gradient.yml
